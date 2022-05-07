@@ -138,3 +138,4 @@ Werkzeug==2.0.2
 widgetsnbextension==3.5.2
 zipp
 bz2file
+gunicorn
