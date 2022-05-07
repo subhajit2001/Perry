@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="/static/images/perry.jpeg" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='chatbot.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='homepage.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='devspage.css') }}"
+    />
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="HandheldFriendly" content="true" />
+    <title>Perry</title>
+    <link rel="icon" href="images/perry.png" type="image/png" />
+    <link rel="stylesheet" href="homepage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="preloader"></div>
+    <nav>
+      <div class="wrapper">
+        <div class="logo">
+          <font style="color: #f0bb62; font-size: 65px">p</font>erry<font
+            style="color: #f0bb62"
+            >.</font
+          >
+        </div>
+        <ul class="nav-links">
+          <li><a href="/devpage">Devs</a></li>
+          <li>
+            <a href="https://forms.gle/wzYLoPvVT9MrgpmRA" target="_blank"
+              >Feedback</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br /><br />
+    <br />
+
+    <div class="container">
+      <div class="chatbox">
+        <div class="chatbox__support">
+          <div class="chatbox__header">
+            <div class="chatbox__image--header">
+              <img src="/static/images/perry.jpeg" alt="image" id="perry" />
+            </div>
+            <div class="chatbox__content--header">
+              <h4 class="chatbox__heading--header">Perry</h4>
+            </div>
+          </div>
+
+          <div class="chatbox__messages">
+            <p id="botStarterMessage">
+              <span
+                ><b>"Show the best products for {<i>product name</i>}"</b></span
+              >
+            </p>
+            <p id="botStarterMessage"><span>To make me work, type,</span></p>
+            <p id="botStarterMessage">
+              <span
+                >So from now, no need to go on product hunt. Just have a chat
+                with Perry.</span
+              >
+            </p>
+            <p id="botStarterMessage">
+              <span
+                >I'm an AI detective who performs multi-web product searching,
+                comparing and filtering to bring you, your desired products
+                hands-on.
+              </span>
+            </p>
+            <p id="botStarterMessage"><span>Hi there! I'm Perry.</span></p>
+          </div>
+
+          <div id="loading">
+            <img
+              class="loading-gif"
+              src="/static//images/chris-lumain-3d.gif"
+            />
+          </div>
+          <div class="chatbox__footer">
+            <input type="text" placeholder="Write a message..." />
+            <button class="chatbox__send--footer send__button">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/17.3.1/lazyload.min.js"
+    >
+      $SCRIPT_ROOT = "{{ request.script_root|tojson }}";
+    </script>
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='app.js') }}"
+    ></script>
+
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load", function () {
+        loader.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.teams{
+    font-family: 'Poppins', sans-serif;
+}
+
+.home{
+  display: inline-block;
+}
+
+.home  .max-width{
+  width: 100%;
+  display: inline-block;
+}
+.max-width .row{
+  margin-right: 0;
+}
+
+.text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+.teams{
+    color:#fff;
+}
+
+.card{
+    width: calc(33% - 20px);
+    background: #A3DA8D;    ;
+    text-align: center;
+    border-radius: 6px;
+    padding: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+.card:hover .box{
+    transform: scale(1.05);
+}
+
+.card i{
+    font-size: 50px;
+    color: #FFCC1D;
+    transition: color 0.3s ease;
+
+}
+
+.card:hover i{
+    color: #fff;
+    
+}
+.card:hover .text i{
+    color: rgb(0, 0, 0);
+    
+}
+.card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+
+.text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.floating
+{
+float:left;
+}
+
+.teams .card{
+    background: #3E8E7E;
+    border-radius: 6px;
+    padding: 1.5%;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.teams  .card:hover{
+    background: #FFCC1D;
+    font: black;
+}
+.teams .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.teams .card:hover .box{
+    transform: scale(1.05);
+}
+.teams .card:hover .text {
+    color: black;
+}
+.teams .card:hover .para {
+    color: #000000;
+}
+.teams .card:hover .social {
+    color: #000000;
+}
+.teams .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.teams .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #FFCC1D;
+    transition: all 0.3s ease;
+}
+.teams .card:hover img{
+    border-color: #fff;
+}
+.btn {
+    background: #ffffff;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #000000;
+    font-size: 20px;
+    padding: 4px 10px 4px 10px;
+    border: solid #FFCC1D 2px;
+    text-decoration: none;
+}
+  
+.btn:hover {
+    background: #ffffff;
+    text-decoration: none;
+}
+#preloader{
+    background: #3E8E7E url(/static/images/loader.gif) no-repeat center center;
+    background-size: 7.5%;
+    height:100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+  }
